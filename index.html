@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cornell University Museum of Vertebrates</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script type="module" crossorigin src="/cumv-map/assets/index-C-xIvzrv.js"></script>
+  <link rel="stylesheet" crossorigin href="/cumv-map/assets/index-DcDhuKwl.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="page-header">
+      <img src="/cumv-map/assets/CUMV_logo-CZv4DQtN.png" alt="Cornell University Museum of Vertebrates logo" class="logo" />
+      <h1>Cornell University Museum of Vertebrates</h1>
+    </header>
+
+    <section class="controls-panel">
+      <div class="status-row">
+        <div class="year-display">Current Year: <span id="yearLabel">-</span></div>
+        <div id="recordCount" class="record-count">0 localities displayed</div>
+      </div>
+
+      <div class="control-row">
+        <button id="playPauseBtn" type="button">Play</button>
+        <button id="slowBtn" type="button">Slow</button>
+        <button id="mediumBtn" type="button" class="active">Medium</button>
+        <button id="fastBtn" type="button">Fast</button>
+      </div>
+
+      <div class="control-row">
+        <button id="firstYearBtn" type="button">First Year</button>
+        <button id="minus1Btn" type="button">-1 Year</button>
+        <button id="minus5Btn" type="button">-5 Years</button>
+        <button id="minus10Btn" type="button">-10 Years</button>
+        <button id="plus1Btn" type="button">+1 Year</button>
+        <button id="plus5Btn" type="button">+5 Years</button>
+        <button id="plus10Btn" type="button">+10 Years</button>
+        <button id="lastYearBtn" type="button">Last Year</button>
+        <button id="loopBtn" type="button">Loop Time: Off</button>
+      </div>
+
+      <div class="slider-row">
+        <input id="yearSlider" type="range" min="0" max="0" value="0" step="1" />
+      </div>
+
+      <div class="legend">
+        <span><i class="swatch fish"></i>Fish</span>
+        <span><i class="swatch reptiles"></i>Reptiles &amp; Amphibians</span>
+        <span><i class="swatch birds"></i>Birds</span>
+        <span><i class="swatch mammals"></i>Mammals</span>
+        <span><i class="swatch total"></i>Total (Graph)</span>
+      </div>
+    </section>
+
+    <section class="viz-panel">
+      <div id="map"></div>
+      <div id="lineChart"></div>
+    </section>
+
+    <p id="loadingText" class="loading">Loading specimen data...</p>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+</body>
+</html>
