@@ -4,14 +4,11 @@ Interactive web app for visualizing CUMV specimen localities through time using 
 
 ## Run locally (Windows)
 
-1. Open PowerShell in this project folder:
-   `c:\Users\vd248\Documents\CUMV_map_app`
+1. Open PowerShell in the project folder
 2. Install dependencies:
    `npm install`
 3. Start the app:
    `npm start`
-4. Open:
-   `http://localhost:3000`
 
 ## Included files
 
