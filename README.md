@@ -2,6 +2,10 @@
 
 Interactive web app for visualizing CUMV specimen localities through time using `cumv_localities_all.csv`.
 
+## Live Site
+
+https://debrito-victor.github.io/cumv-map/
+
 ## Run locally (Windows)
 
 1. Open PowerShell in the project folder
